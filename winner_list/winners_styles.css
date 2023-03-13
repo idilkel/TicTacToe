@@ -15,7 +15,8 @@ html {
 }
 
 body {
-  background: -webkit-linear-gradient(top, #0f2f53, rgb(182, 242, 255));
+  /* background: -webkit-linear-gradient(top, #0f2f53, rgb(182, 242, 255)); */
+  background-color: whitesmoke;
   height: 100%;
 }
 
@@ -37,28 +38,35 @@ body {
   background: -webkit-linear-gradient(top, #0f2f53, #264e7d);
 }
 
-.credentials {
+.footer {
   grid-column: 1/13;
   grid-row: 12/13;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: beige;
-  background: -webkit-linear-gradient(top, #0f2f53, #264e7d);
+  overflow: hidden;
+}
+
+.header {
+  grid-column: 1/13;
+  grid-row: 1/2;
+  overflow: hidden;
 }
 
 .header-winner {
-  grid-column: 4/9;
+  grid-column: 4/10;
   grid-row: 3/4;
   display: flex;
   justify-content: center;
   align-items: center;
   color: beige;
-  background: -webkit-linear-gradient(top, #0f2f53, #264e7d);
+  /* background: -webkit-linear-gradient(top, #0f2f53, #264e7d); */
+  background: linear-gradient(
+    180deg,
+    rgba(9, 94, 121, 1) 0%,
+    rgba(100, 149, 237, 1) 100%
+  );
 }
 
 .winners-table-container {
-  grid-column: 3/10;
+  grid-column: 3/11;
   grid-row: 4/11;
   /* border: 3px solid rgb(14, 14, 60); */
   display: flex;
@@ -75,11 +83,15 @@ table {
   border-collapse: collapse;
   width: 70%;
   margin: 0 auto;
-  background-color: #104d5e;
+  /* background-color: #104d5e; */
+  background: linear-gradient(
+    180deg,
+    rgba(9, 94, 121, 1) 0%,
+    rgba(100, 149, 237, 1) 100%
+  );
   border: 1px solid gray;
   position: absolute;
   top: 5px;
-  /* position: relative; */
 }
 
 td,
@@ -95,7 +107,7 @@ th {
   font-weight: bold;
 }
 
-[type="button"] {
+.winner-container [type="button"] {
   border: 1px solid #345479;
   background: #345479;
   border-radius: 10%;
@@ -107,11 +119,46 @@ th {
   left: 45%;
   padding: 10px;
   font-weight: bold;
+  position: absolute;
+  /* bottom: -20px; */
+  top: 270px;
 }
 
-[type="button"]:hover {
+.winner-container [type="button"]:hover {
   border: 1px solid #337ab7;
   background: white;
   border-radius: 15%;
   color: #337ab7;
+}
+
+@media only screen and (max-height: 807px), screen and (max-width: 1110px) {
+  .winners-table-container {
+    grid-column: 2/12;
+    grid-row: 4/11;
+    position: relative;
+  }
+
+  .winners-table-container [type="button"] {
+    left: 45%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .winners-table-container {
+    grid-column: 2/12;
+    grid-row: 4/11;
+  }
+
+  a [type="button"] {
+    left: 25%;
+    bottom: 0px;
+  }
+
+  .header-winner {
+    grid-column: 2/12;
+  }
+
+  .winners-table {
+    width: 100%;
+  }
 }
