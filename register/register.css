@@ -176,4 +176,8 @@ form {
     grid-row: 4/12;
     margin-bottom: 10px;
   }
+
+  div.field-block {
+    padding-left: 30px;
+  }
 }
