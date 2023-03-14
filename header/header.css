@@ -64,4 +64,14 @@ body {
     font-size: medium;
     text-align: center;
   }
+  .nav {
+    margin: 0px;
+    padding-right: 30px;
+  }
+
+  .header a {
+    padding: 0 5px;
+    /* display: flex;
+    align-self: center; */
+  }
 }

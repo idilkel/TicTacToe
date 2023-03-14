@@ -158,23 +158,27 @@ input {
 }
 
 @media only screen and (max-width: 1110px) {
-  .login {
-    background-color: rgb(207, 211, 211);
-    grid-column: 3/11;
-    grid-row: 5/11;
+  .homepage-container {
+    grid-column: 2/12;
+    grid-row: 5/12;
     display: flex;
     flex-direction: column;
     justify-content: start;
   }
 
-  .homepage-container {
-    grid-column: 3/11;
-    grid-row: 5/11;
+  .middle-container {
+    /* grid-column: 3/11;
+    grid-row: 5/11; */
   }
 
-  .middle-container {
-    grid-column: 3/11;
-    grid-row: 5/11;
+  .login {
+    background-color: rgb(207, 211, 211);
+    /* grid-column: 3/11;
+    grid-row: 5/11; */
+  }
+
+  div.field-block {
+    padding-left: 30px;
   }
 
   .homepage h3,
@@ -183,8 +187,18 @@ input {
     align-self: center;
   }
 
+  h1.title {
+    padding-top: 0px;
+    padding-bottom: 5px;
+  }
+
   .homepage img {
-    height: 150px;
+    height: 130px;
     width: 30%;
+  }
+
+  [type="button"],
+  [type="submit"] {
+    width: 70px;
   }
 }
